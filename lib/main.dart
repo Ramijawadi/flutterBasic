@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:testapp/pages/CounterPage.dart';
+import 'package:testapp/pages/TodoPage.dart';
 import 'package:testapp/pages/first_page.dart';
 import 'package:testapp/pages/home_page.dart';
 import 'package:testapp/pages/settings_page.dart';
@@ -15,8 +16,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-
-      home : CounterPage(),
+debugShowCheckedModeBanner: false,
+      home :TodoPage(),
     );
   }
 }

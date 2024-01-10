@@ -1,65 +1,69 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables
+// // ignore_for_file: prefer_const_literals_to_create_immutables
 
-import 'package:flutter/material.dart';
+// import 'package:flutter/material.dart';
 
 
-class CounterPage extends StatefulWidget {
-  const CounterPage({super.key});
+// class CounterPage extends StatefulWidget {
+//   const CounterPage({super.key});
 
-  @override
-  State<CounterPage> createState() => _CounterPageState();
-}
+//   @override
+//   State<CounterPage> createState() => _CounterPageState();
+// }
 
-class _CounterPageState extends State<CounterPage> {
+// class _CounterPageState extends State<CounterPage> {
 
-  int _counter = 0 ;
-    int _countertwo = 0 ;
+//   int _counter = 0 ;
+//     int _countertwo = 0 ;
+
 
   
-void _increment() {
+// void _increment() {
 
-setState(() {
-  _counter ++ ;
-});
-}
+// setState(() {
+//   _counter ++ ;
+// });
+// }
 
-void _decrement() {
+// void _decrement() {
 
-setState(() {
-  _countertwo -- ;
-});
-}
+// setState(() {
+//   _countertwo -- ;
+// });
+// }
 
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-  body: Center(
-    child: Column(
-       mainAxisAlignment : MainAxisAlignment.center,
-      children: [
-    Text('this pushed many times : '),
+//  @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//   body: Center(
+//     child: Column(
+//        mainAxisAlignment : MainAxisAlignment.center,
+//       children: [
+//     Text('this pushed many times : '),
 
-    Text(
-      _counter.toString(), 
-      style:TextStyle(fontSize: 20),
-    ),
-    ElevatedButton(onPressed: _increment, child: Text("increment !"),
+//     Text(
+//       _counter.toString(), 
+//       style:TextStyle(fontSize: 20),
+//     ),
+//     ElevatedButton(onPressed: _increment, child: Text("increment !"),
     
-    ),
+//     ),
 
 
-       Text(
-      _countertwo.toString(), 
-      style:TextStyle(fontSize: 30),
-    ),
-    ElevatedButton(onPressed: _decrement, child: Text("decrement !"),
+//        Text(
+//       _countertwo.toString(), 
+//       style:TextStyle(fontSize: 30),
+//     ),
+//     ElevatedButton(onPressed: _decrement, child: Text("decrement !"),
     
-    ),
+    
+//     ),
+
+    
      
-     ],),
-  )
+//      ],),
+//   )
 
-    );
-  }
-}
+//     );
+//   }
+// }
