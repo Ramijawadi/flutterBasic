@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:testapp/pages/CounterPage.dart';
 import 'package:testapp/pages/first_page.dart';
 import 'package:testapp/pages/home_page.dart';
 import 'package:testapp/pages/settings_page.dart';
@@ -8,23 +9,33 @@ import 'package:testapp/pages/settings_page.dart';
 void main() {
   runApp(MyApp());
 }
-
 class MyApp extends StatelessWidget {
-  MyApp({super.key});
-  List names = ["rami", "alex", "sami", "alex", "sami", "sami", "alex", "sami"];
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: firstPage(),
-        routes: {
-          '/firstPage': (context) => (firstPage()),
-          '/settingsPage': (context) => (settingsPage()),
-          '/homePage': (context) => (homePage()),
-        });
+
+      home : CounterPage(),
+    );
   }
 }
+// class MyApp extends StatelessWidget {
+//   MyApp({super.key});
+//   List names = ["rami", "alex", "sami", "alex", "sami", "sami", "alex", "sami"];
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//         debugShowCheckedModeBanner: false,
+//         home: firstPage(),
+//         routes: {
+//           '/firstPage': (context) => (firstPage()),
+//           '/settingsPage': (context) => (settingsPage()),
+//           '/homePage': (context) => (homePage()),
+//         });
+//   }
+// }
 
 
       
