@@ -2,14 +2,16 @@
 
 import "package:flutter/material.dart";
 
-class settings_page extends StatelessWidget {
-  const settings_page({super.key});
+class settingsPage extends StatelessWidget {
+  const settingsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-
-      appBar: AppBar(title:Text("hello settings Page"))
-    );
+        return Scaffold(
+  backgroundColor: const Color.fromARGB(221, 153, 54, 54),
+body:Center(
+     child :Text("it's a Profile page"),
+),
+      );
   }
 }
