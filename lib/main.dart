@@ -1,23 +1,35 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:testapp/pages/CounterPage.dart';
+import 'package:testapp/pages/TodoApp.dart';
 import 'package:testapp/pages/TodoPage.dart';
 import 'package:testapp/pages/first_page.dart';
 import 'package:testapp/pages/home_page.dart';
 import 'package:testapp/pages/settings_page.dart';
 
-void main() {
-  runApp(MyApp());
+void main () async  {
+ //init the hive
+ await Hive.initFlutter();
+
+ //create a box
+var box = Hive.openBox('mybox');
+
+
+  runApp( const MyApp());
 }
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-debugShowCheckedModeBanner: false,
-      home :TodoPage(),
+      
+      debugShowCheckedModeBanner: false,
+      home: TodoApp(),
+       theme: ThemeData(primaryColor: const Color.fromARGB(255, 255, 7, 40)),
+   
     );
   }
 }
