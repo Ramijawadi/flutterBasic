@@ -8,15 +8,15 @@ import 'package:testapp/pages/TodoPage.dart';
 import 'package:testapp/pages/first_page.dart';
 import 'package:testapp/pages/home_page.dart';
 import 'package:testapp/pages/settings_page.dart';
+import 'package:hive/hive.dart';
+
 
 void main () async  {
  //init the hive
  await Hive.initFlutter();
-
+//  await  Hive.openBox('mybox');
  //create a box
-var box = Hive.openBox('mybox');
-
-
+  var box =  await Hive.openBox('mybox');
   runApp( const MyApp());
 }
 class MyApp extends StatelessWidget {

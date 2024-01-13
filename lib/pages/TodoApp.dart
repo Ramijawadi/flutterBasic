@@ -14,30 +14,25 @@ class TodoApp extends StatefulWidget {
 }
 
 class _TodoAppState extends State<TodoApp> {
+  //reference the box 
+    final _myBox = Hive.box('mybox');
+  // add the controller 
   final _controller = TextEditingController();
-  final _myBox = Hive.box('mybox');
-todoListDataBase db = todoListDataBase();
-
-
-
-@override
+  
+  todoListDataBase db = todoListDataBase();
+ @override
   void initState() {
-    if(_myBox.get('todolist') == null){
+    if(_myBox.get('TODOLIST') == null){
 
       db.createInitialData();
     }
     else{
 
-      db.updateData();
+      db.loadData();
     }
     super.initState();
   }
-  // List todoList = [
-  //   ["do tutorial", false],
-  //   ["do somthing", false],
-  //   ["do tutorial", true],
-  
-  // ];
+ 
 
   void checkbocChanged(bool? value, int index) {
     setState(() {
@@ -53,7 +48,7 @@ todoListDataBase db = todoListDataBase();
       _controller.clear();
     });
     Navigator.of(context).pop();
-      db.updateData();
+    db.updateData();
   }
 //create task
   void createNewTask() {
@@ -64,8 +59,6 @@ todoListDataBase db = todoListDataBase();
             controller: _controller,
             onSave: saveTask,
             onCancel: () => Navigator.of(context).pop(),
-             
-         
           );
         });
   }
@@ -77,7 +70,8 @@ todoListDataBase db = todoListDataBase();
     setState(() {
       db.todoList.removeAt(index);
     });
-      db.updateData();
+        db.updateData();
+
   }
 
   @override
